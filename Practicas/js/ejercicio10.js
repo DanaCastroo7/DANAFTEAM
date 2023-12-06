@@ -68,7 +68,32 @@ function updateRecords(records, id, prop, value) {
       albumTitle: 'ABBA Gold'
     }
   }
-//   console.log(updateRecords);
-  console.log(updateRecords(recordCollection, 2548, "artist", "Bon Jovi Updated")); // Actualiza el artista del álbum con id 2548
-  console.log(updateRecords(recordCollection, 5439, "tracks", "Dancing Queen")); // Añade una pista al álbum con id 5439
-  console.log(updateRecords(recordCollection, 1245, "artist", "")); // Borra la propiedad "artist" del álbum con id 1245
+ // console.log(updateRecords(recordCollection, 5439, "artist", "ABBA")); 
+  // console.log(updateRecords(recordCollection, 5439, "tracks", "Take a Chance on Me"));
+  // console.log(updateRecords(recordCollection, 2548, "artist", "     "));
+  // console.log(updateRecords(recordCollection, 1245, "tracks", "Addicted to Love"));
+  // console.log(updateRecords(recordCollection, 2468, "tracks", "Free"));
+  // console.log(updateRecords(recordCollection, 2548, "tracks", "     "));
+  // console.log(updateRecords(recordCollection, 1245, "albumTitle", "Riptide"));
+
+updateRecords(recordCollection, 5439, "artist", "ABBA");
+console.log(recordCollection[5439].artist); 
+
+updateRecords(recordCollection, 5439, "tracks", "Take a Chance on Me");
+console.log(recordCollection[5439].tracks); 
+
+
+updateRecords(recordCollection, 2548, "artist", "");
+console.log(recordCollection[2548].artist); 
+
+updateRecords(recordCollection, 1245, "tracks", "Addicted to Love");
+console.log(recordCollection[1245].tracks); 
+
+updateRecords(recordCollection, 2468, "tracks", "Free");
+console.log(recordCollection[2468].tracks); 
+
+updateRecords(recordCollection, 2548, "tracks", "");
+console.log(recordCollection[2548].hasOwnProperty("tracks")); 
+
+updateRecords(recordCollection, 1245, "albumTitle", "Riptide");
+console.log(recordCollection[1245].albumTitle); 
